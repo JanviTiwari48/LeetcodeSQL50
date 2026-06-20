@@ -1,0 +1,12 @@
+SELECT *
+FROM Users
+WHERE REGEXP_LIKE(
+    mail,
+    '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$',
+    'c'
+);
+
+#[A-Za-z]-start will be a letter
+#[A-Za-z0-9_.-] - can contain letter,digit,underscore dot and dash
+# *-zero or more occurances
+#@leetcode\\.com$ -.means any charcter so to escape it we add\\
